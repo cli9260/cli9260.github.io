@@ -1,60 +1,92 @@
 <!doctype.html>
 <html lang="en">
-<head>
+  <head>
     
     
      <meta charset="utf-8">
-    
+      
+      <title> Online Practice Quiz</title>
+  
     <script>
-        
-        var myfirstvariable = 8;
+      
     
-    function button1() {
-            
-            html = "<img src='desktopwallpaper2.jpg'>";
         
-        
-         document.getElementById("content").innerHTML=('change to my content');
-        
-         document.getElementById("content").innerHTML=('desktopwallpaper2.jpg')      
+      function  button1(){
+          
+          html = "<p>Your a gentle giant with a big appetite. </p><img src='hippo.jpg' class= 'imgSize'>";
+          
+          
+          document.getElementById("content").innerHTML= html;
+          
         }
         
-    
-    
+    function button2() {
+        
+         html = "<p>Your tall physique make you seem intimidating at first, but you are actually very vulnerable.</p><img src='giraffe.jpg'>";
+        
+         document.getElementById("content").innerHTML = html;
+    }
+      
+     function button3() {
+        
+         html = "<p>Your striking qualities are enough to make heads turn.</p><img src='zebra.jpg'>";
+        
+         document.getElementById("content").innerHTML = html;
+    }
+      
+      
     </script>
-    
-    <style>
-        .assessment {
-            background: red;
-        }
-        #content {
-            background:yellow;
-        }
-    
-    </style>
-    
-    
+      
+      <style>
+          .assessment {
+              background: white;
+             font-family: sans-serif;
+              font-size: 25px;     
+             
+          }
+          #content {
+              
+              background:yellow;
+          
+              
+          }
+          .imgSize {
+              width: 15%;
+              height: 35%;
+          }
+          h1 {
+              font-family: sans-serif;
+              font-variant-caps: all-small-caps;
+        
+          }
+          h3 {
+              text-decoration: underline;
+                font-size: 45px;
+              font-variant-caps: all-small-caps;
+          }
+          
+      </style>
     
     
     </head>
-     
-    <body>
-        
-        <h1>Spirit Animal Quiz</h1>
-        
-<button onclick="button1()">Button 1</button>
-        <button> button2</button>
-        <button> button3</button>
-    
-    <div id="content" 
 
-         
+    
+<body>
+    
+    <h1><center>Which Spirit Animal are You?</center></h1>
+    
+    
+    <button onclick="button1()">Button 1</button>
+    <button onclick="button2()">Button 2</button>
+    <button onclick="button3()">Button 3</button>
+ 
+    <div class="assessment">
+        <h3><center>Assessment</center></h3>
+         <div id="content">
+          
+        </div>
     </div>
-         
     
-    
-    
-    
-</body>
-    
-    </html>
+     </body>
+
+  </html>
