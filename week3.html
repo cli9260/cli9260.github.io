@@ -1,0 +1,97 @@
+<!doctype.html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+      
+      <title>Template</title>
+      
+      <style>
+      
+         body {
+              
+             background-color: papayawhip; 
+            
+          }
+      
+          .moodButton {
+              object-position: center;
+          }
+          button {
+              
+              font-family: serif;
+              font-variant-caps: all-petite-caps;
+              font-size: 30px;
+              background: white;
+              border: none;
+              border-top-left-radius: 11px;
+              border-bottom-right-radius: 11px;
+              padding: 7px, 7px, 7px, 7px;
+              outline-color: none;
+              
+          }
+      
+      
+      
+      
+      
+      
+      </style>
+    <script>
+      var myFirstVariable = "valuehere"; 
+      
+      var myFirstArray = ["apple", "orange", "3"];
+        
+      var mySecondArray = [1,2,3];
+        
+      var colors = ["#A4C1FC","#97D98D","#FFA7BB"];
+    
+      /*alert(myFirstArray);
+      console.log(myFirstArray);
+        
+      alert(myFirstArray[1]);
+    
+      if(myFirstArray[1]== "orange") {
+          alert("orange");
+     }
+      else {
+           alert("no 3 found");
+     }
+   
+       function moodChange() {
+          alert("Your mood is not that great");
+       }
+      */   
+       function moodChange() {
+          buttonVal = document.getElementById("moodButton");
+          
+           if (buttonVal.value == 0) {
+              console.log(buttonVal.value)
+              document.body.style.backgroundColor = colors[0];
+              buttonVal.value = 1;
+          }
+           else if (buttonVal.value == 1) {
+               document.body.style.backgroundColor = colors[1];
+               buttonVal.value = 2;
+           }
+         
+          else {
+             document.body.style.backgroundColor = colors[2];
+              buttonVal.value = 0;
+          }
+           
+       }
+        
+        
+      </script>
+    </head>
+    
+    <body>
+        
+        <button id="moodButton" value="0"  onclick="moodChange()">What is your Mood?</button>
+    
+    </body>
+
+
+</html>
+  
