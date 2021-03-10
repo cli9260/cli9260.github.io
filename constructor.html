@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Writing a constructor</title>
+    <p id=" Studentinfo"></p>
+    </head>
+     <script>
+      
+         function students(name,age, eyeColor) {
+             alert('name is: ' + name);
+             alert('age is: ' + age);
+             alert('eyeColor is: ' + eyeColor);
+            this.name = name;
+             this.age = age;
+             this.eyeColor = eye;
+             
+            
+         }
+         
+        var girl = new Person("Amy",18,"green");
+         
+         document.getElementById("Studentinfo").innerHTML = "Amy is " + girl.age + ".";
+      
+    </script>
+   
+
+<body>
+   
+ <button onclick="students('Kurt',19,'blue')">Student Information</button>
+
+</body>
+</html>
