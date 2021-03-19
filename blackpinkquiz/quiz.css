@@ -1,0 +1,125 @@
+
+body {
+    background-color: lightpink;
+
+
+}
+
+h1 {
+    text-align: center;
+    font-family: "Brandon Grotesque";
+    font-weight: 400;
+   
+}
+
+h2 {
+    font-family: "Brandon Grotesque";
+    font-weight: 500;
+    font-size: 200px;
+    color: red;
+    text-decoration: underline;
+    margin-left:400px;
+  
+}
+
+.id{
+    align-content: center;
+}
+
+form #quiz {
+    padding: 0;
+    margin-left : 450px;
+    width: 700px;
+    padding: 10px 20px 10px 20px;
+    
+}
+
+
+#quiz {
+	margin-left: 420px ;
+	background: white;
+	padding: 10px 20px 10px 20px;
+	width: 550px;
+    object-position: center;
+    border-radius:25px;
+
+
+}
+
+
+#text {
+    font-family: "Brandon Grotesque";
+    font-size:
+    
+}
+input {
+	margin-bottom: 20px;
+	display: block;
+   
+}
+
+.questions {
+    font-family: "Brandon Grotesque";
+     font-weight: 400;
+    font-size: 25px;
+    padding: 10px 25px 10px 10px;
+    text-align: justify-all;
+    
+}
+
+#textbox {
+	height: 25px;
+	font-size: 16px;
+	border-radius: 5px;
+	padding-left: 15px;
+    padding-bottom: 15px;
+    margin-bottom:25px;
+}
+
+
+button {
+    padding: 50px 55px 50px 55px;
+	border: white;
+    border-radius: 70 70 70 70px;
+	padding: 10px;
+	color: white;
+	font-size: 45px;
+    font-family: "Brandon Grotesque";
+    font-weight: 200;
+	transition-duration: .5s;
+	margin-top: 100px;
+}
+
+
+
+button:hover {
+	background: white;
+	border: 1px solid pink;
+	color: black;
+	cursor: pointer;
+
+}
+
+#after-quizcompleted {
+	visibility: hidden;
+	background-color: firebrick;
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	margin-left: 480px;
+	font-size: 30px;
+
+
+}
+
+#picture {
+	width: 375px;
+	height: 245px;
+}
+
+
+
+#bp {
+	display: inline;
+    
+} 
