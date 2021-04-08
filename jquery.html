@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+ <head> 
+     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <style>
+        .squarebox{
+            background-color: lightblue;
+            border: none;
+            padding: 50px 50px;
+            margin: auto;
+            height: 70px;
+            width: 100px;
+            font-family: monospace, bold;
+            font-size: 17px;
+            display: inline-flex;
+            text-align: center;
+            
+        }
+     
+        .blue {
+            background-color: blue;
+            display: none;
+            border: none;
+            padding: 50px 50px;
+            margin: auto;
+            height: 50px;
+            width: 50px;
+            font-family: monospace bold;
+            font-size: 15px;
+            text-align: center;
+            display: block;
+            color: white;
+        
+            
+        }
+        .green {
+            background-color: green;
+            display: none;
+            border: none;
+            padding: 100px 100px;
+            margin: auto;
+            height: 100px;
+            width: 100px;
+            font-family: monospace bold;
+            font-size: 15px;
+            text-align: center;
+            display: inline;
+            color: white;
+        }
+     
+     </style>
+     
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    </head>
+    
+    <body>
+        <title>Using JQuery UI on a Webpage</title>
+    
+     <p>Take a jquery UI element and make it function in your code for homework (examples: include effects or widgets </p>
+    
+        
+        
+         <div class="squarebox">
+         Hover mouse <Br>over this box!
+    <div class="green">
+        green means go!
+    </div>
+         <div class="blue">
+             blue
+             </div>
+
+        <script>
+             
+            $('.squarebox').mouseover(function(){
+            $(".green").toggle("slide");
+         });
+            $('.squarebox').mouseout(function(){
+                $(".blue").hide();
+                $(".green").hide;
+            });
+            
+            $('.green').toggle(function(){
+               $(".blue").show(); 
+                
+            });
+             
+          
+                     
+        </script>
+         
+    
+        </div>
+    </body>
+</html>
