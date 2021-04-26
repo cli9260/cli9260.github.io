@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Big Music Club Conclomerate</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+        
+        hr {
+            border:none;
+            height: 3px;
+            border-style: solid;
+            border-color: #6A0DAD;
+            opacity: 75%;
+    
+        }
+        h1 {
+            margin: 0;
+            padding: 5px;
+            font-size: 27px;
+            font-weight: 100px;
+            line-height: 120%;
+            text-align: justify;
+            display: block;
+            width: 204px;
+            position: relative;
+        }
+        h2 {
+            font-family: 'monospace serif';
+            font-weight: 200px;
+            left: 100px;
+        }
+        h3 {
+            float: left;
+            margin-left: 50px;
+            font-size: 22px;
+            font-family: 'Verdana';
+            letter-spacing: 15px;
+        }
+        body {
+            margin: 0;
+            padding: 50, 50, 50, 50;
+            font-family: 'Futura';
+            font-weight: normal;
+            margin-left: 200px;
+            display: inline-block;
+        }
+        nav {
+            margin: 100px 300px;
+
+        }
+        nav ul {
+            list-style: none;
+            margin: auto;    
+            padding: 50px, 50px, 50px, 50px;
+            display: inline-block;
+            align-content: center;
+        }
+        nav li {
+            float: left;
+            left: 150px;
+            width: 160px;
+            height: 50px;
+            background-color: none;
+            line-height: 20px;
+            text-align: center;
+            position: relative;
+             
+        }
+        nav li a {
+            display: block;
+            width: 200%;
+            height: 90%;
+            text-decoration: none;
+            color: black;
+            border: none;
+            text-align: left;
+        
+        }
+        nav li a:hover {
+            color: #6A0DAD;
+        
+        }
+        nav ul.sub {
+            position: absolute;
+            display: none;
+            left: -200px;
+        }
+        nav ul.sub li ul.sub {
+            top:0;
+            left: 120px;
+            text-align: center;
+        }
+        
+       .image{
+            background-size: 100%;
+            background-repeat: repeat-y; 
+            
+        }
+        img {
+            background-size:100% calc(100%);
+            background-repeat:repeat-y;
+            width: 1500px;
+            height: 400px;
+            top: 100px;
+
+        }
+    </style>
+</head>
+<body>
+<nav>
+    
+    <h1><center>Music Venues</center></h1>
+    <hr>
+    <ul class="menu">
+        <li>
+            <a href="#top">BIG HALL</a>
+            <ul class="sub">
+            <li><a href="#top">
+		<img src ="drake.jpg" style="width:300px;height:400px;"> <h2>Introducing Drake</h2>
+        live @ Big Hall NY  <br>
+		2019-12-20/22:00 <br>
+        Admission: 40 USD<br>
+	</a></li>
+            <li>
+            <a href="#top"></a>
+    <ul class="sub">
+            
+            <a href="#top"></a>
+    <ul class="sub">
+            <li><a href="#top">
+                
+                
+                
+                </a></li>
+            </ul>
+            </ul>
+            </li>
+            <li><a href="#top"></a></li>
+            </ul>
+            </li>
+            <li>
+         <a href="#top">SMOKEY CLUB</a>
+    <ul class="sub">
+            <li><a href="#top"> <img src = "davidbowie.jpg" style="width:299px; height:380px;"> 
+        <h2>Introducing David Bowie</h2>
+		live @ Smokey Club Queens NY <br>
+        2020-01-12 / 21:00<br>
+		Admission: 45 USD<br>
+		</a></li>
+        
+            </ul>
+            </li>
+            <li>
+         <a href="#top">LITTLE CAFÉ</a>
+    <ul class="sub">
+            <li><a href="#top"> <img src = "madonna.jpeg" style="width: 290px; height: 390px;"> <h2>Introducing Madonna</h2>
+            live @ Little Café Brooklyn NY <br>
+		    2020-03-25 / 20:30<br>
+		    Admission: 45 USD<br> 
+	</a></li>
+            <li>
+    <ul class="sub"> 
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+        </nav>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".menu li").hover(
+            function(){
+                $('>ul.sub:not(:animated)', this).slideDown('fast');
+            },
+            function(){
+                $('>ul.sub',this).slideUp(200);
+            }
+        );
+    });
+</script>
+ <script>
+     var Url = 'https://blmak.github.io/BigMusicClubConclomerateDates.json'
+
+     $.getJSON(Url, function(data) {
+            console.log(data)
+            console.log('hi')
+        
+     
+     });
+    </script>
+
+        <img class="image" src= "eventbackground.jpeg" >
+      <p class="content ">
+          
+          <h3><italic>Who We Are</italic> </h3>
+        The Big Club Conglomerate is home to some of NYC's best live music venues ranging from big arena concerts to underground DIY shows.
+        <br>
+        <br>
+        The hottest pop stars performing live in your local borough with only the best ticket prices! 
+    
+        
+      </p>
+</body>
+</html>
