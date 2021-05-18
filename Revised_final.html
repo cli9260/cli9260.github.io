@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+   
+    <title>Resources on Studio Ghibli (Locations)</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+           <style>
+        
+        body {
+        
+        background-color: #cccccc;
+        background-size: cover;
+        background-position: center;
+        width: 400px;
+        height:700px;
+               }
+        input[type=button]{
+        border-radius: 10px;
+        border-color: lightpink;
+        border-bottom-color: lightpink;
+        border-bottom-width: thick;
+        color: lightcoral;
+        border-spacing: inherit;
+        padding: 10px 15px;
+                }
+        input[value=images]{
+        font-family: monospace;
+        font-size: 17px;
+        color: lightcoral;
+        text-transform: lowercase;
+        font-kerning: normal;
+        font-weight: 700;
+               } 
+        #description1, #description2, #description3 {
+         position: relative;
+         bottom: 0;
+         right: -300px;
+         top: -290px;
+         width: 1000px;
+         display: flex;
+         font-family: 'Playfair_Display';
+         font-weight: 700;
+         font-kerning: auto;
+         color:darkgrey;
+         font-size: 47px;
+         line-height: 55px;
+         letter-spacing: 7px;
+                   }
+         
+        
+        h1 {
+            margin: 0;
+            padding: 5px;
+            font-size: 27px;
+            font-weight: 100px;
+            line-height: 120%;
+            text-align: justify;
+            display: block;
+            width: 204px;
+            position: relative;
+            font-size: 15px;
+        }
+        h2 {
+            font-family: monospace;
+            font-weight: 100px;
+            color:lightcoral;
+            left: 100px;
+            font-size: 25px;
+        }
+       
+        body {
+            margin: 0;
+            padding: 50, 50, 50, 50;
+            font-family: 'Playfair_Display';
+            font-weight: 700;
+            margin-left: 200px;
+            display: inline-block;
+        }
+        nav {
+            margin: 100px 300px;
+
+        }
+        nav ul {
+            list-style: none;
+            margin: auto;    
+            padding: 50px, 50px, 50px, 50px;
+            display: inline;
+            align-content: center;
+            bottom: 70px;
+        }
+        nav li {
+            float: left;
+            left: 150px;
+            bottom: 120px;
+            width: 300px;
+            height: 27px;
+            background-color: none;
+            line-height: 27px;
+            text-align: center;
+            position: relative;
+             
+        }
+        nav li a {
+            display: inline-block;
+            width: 400%;
+            height: 50%;
+            text-decoration: none;
+            color: black;
+            border: none;
+            text-align: left;
+            font-size: 27px;
+        
+        }
+        nav li a:hover {
+            color: #6A0DAD;
+        
+        }
+        nav ul.sub {
+            position: absolute;
+            display: none;
+            left: 100px;
+        }
+        nav ul.sub li ul.sub {
+            top:0;
+            left: 120px;
+            text-align: center;
+        }
+        
+    
+    </style>
+  </head>
+    
+  <body>
+      
+          
+      <img src="Spirited_Away.jpeg" id="myImage" width="200" height="300">
+      
+  <input type="button" onclick="changeImage()" value="images" /> 
+      <h2>Click to view film posters</h2>
+               
+    <script>
+        function changeImage() {
+            var image = 
+            document.getElementById('myImage');
+            if (image.src.match("totoro-original-poster.jpeg")) {
+                image.src = "Spirited_Away.jpeg";
+                attri('id');
+            }
+            else if (image.src.match("Spirited_Away.jpeg")){
+                image.src = "castle_poster.jpeg";
+            }
+            else {
+                     image.src = "totoro-original-poster.jpeg";
+                     }
+        }
+      film = $.get("https://ghibliapi.herokuapp.com/locations", function(data,status) {
+          console.log(data);
+           var filmLocation = "<img src=castle_poster.jpeg" + data["locations"];
+          $("#locations").append(data["locations"] + ">");
+          $("#locations").append(film);
+      });
+        
+        
+
+                
+      </script>
+      <attribute>
+      <div id = "description1"></div>
+      <div id = "description2"></div>
+      <div id = "description3"></div>
+       </attribute>
+      <hr>
+      <script src = "final.js"></script>
+      <script>
+         
+      $(function(){
+        $(".menu li").hover(
+            function(){
+                $('>ul.sub:not(:animated)', this).slideDown('fast');
+            },
+            function(){
+                $('>ul.sub',this).slideUp(200);
+            }
+        );
+    });
+      </script>
+      <p> <center>Hover over Ghibli Film Titles to see more info!</center></p>
+      <hr>
+      <nav>
+    <ul class="menu">
+        <li>
+            <a href="#top">Spirited Away</a>
+            <ul class="sub">
+            <li><a href="#top">
+		<img src ="Spirited_Away.jpeg" style="width:100px;height:150px;"> <h2>Sen to Chihiro no Kamikakushi </h2>
+        name: Bathhouse <br>
+		climate: Continental <br>
+        terrain: River<br>
+        surface_water: 70
+	</a></li>
+            <li>
+            <a href="#top"></a>
+    <ul class="sub">
+            
+            <a href="#top"></a>
+    <ul class="sub">
+            <li><a href="#top">
+                
+                </a></li>
+            </ul>
+            </ul>
+            </li>
+            <li><a href="#top"></a></li>
+            </ul>
+            </li>
+            <li>
+         <a href="#top">Castle in the Sky</a>
+    <ul class="sub">
+            <li><a href="#top"> <img src = "castle_poster.jpeg" style="width:100px; height:150px;"> 
+        <h2>Tenkū no Shiro Rapyuta</h2>
+		name: Laputa <br>
+        climate: Continental<br>
+		terrain: City<br>
+        surface_water: 40
+		</a></li>
+        
+            </ul>
+            </li>
+            <li>
+         <a href="#top">My Neighbor Totoro</a>
+    <ul class="sub">
+            <li><a href="#top"> <img src = "totoro-original-poster.jpeg" style="width: 100px; height: 150px;"> <h2>Tonari no Totoro</h2>
+            name: Satsuki's School House<br>
+		    climate: Mild<br>
+		    terrain: River<br>
+            surface_water: 60
+	</a></li>
+            <li>
+    <ul class="sub"> 
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+        </nav>
+          <img src = "totoro.jpeg">
+  </body>
+</html>
